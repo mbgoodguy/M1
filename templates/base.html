@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="http://127.0.0.1:8000/static/favicon.ico" type="image/x-icon">
     <title>{% block title %}{% endblock %}</title>
 
@@ -11,7 +12,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css">
-
 
 
     <!-- JS, Popper.js, and jQuery -->
@@ -28,7 +28,9 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7f7f7fbd;">
-    <a class="navbar-brand" href="{% url 'home' %}">M1</a>
+    <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'logo.png' %}" alt="..." height="60">
+    </a>
 
     <!-- Navbar toggler for mobile -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -64,5 +66,27 @@
 </div>
 
 </body>
+<footer class="bg-body-tertiary text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Telegram -->
+            <a class="social-icon" href="https://">
+                <img src="{% static 'tg_icon.png' %}" alt="..." height="30">
+            </a>
+        </section>
+
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Мастерская М1
+    </div>
+    <!-- Copyright -->
+</footer>
 
 </html>

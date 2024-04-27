@@ -8,23 +8,23 @@
 
 
 body {
-    margin:0;
-    padding:0;
+    margin-bottom: 130px;
+    padding-bottom: 100px;
     font-family:helvetica, sans-serif;
 }
 
 .overpass {
   line-height: 1.8;
   font-family: "Overpass", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
+  /*font-size: 30px;*/
   /*color: red;*/
 }
 
 .oswald {
   font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
+  /*font-size: 30px;*/
   /*color: green;*/
 }
 
@@ -309,4 +309,20 @@ img.user-detail {
 .info-msg {
     padding: 10px;
     background: blue;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e7e7e7;
+    padding: 10px 0 0 0; /* Убираем верхний внутренний отступ */
+    left: 0;
+}
+
+
+/* CSS для основного контейнера */
+.container {
+    margin-bottom: 0px; /* Увеличиваем нижний отступ контейнера, чтобы контент не перекрывался футером */
 }
