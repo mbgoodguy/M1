@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ service_category.title }}{% endblock %}
+
+{% block content %}
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Название</th>
+                <th style="text-align: center;">Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in related_services %}
+            <tr class="service">
+                <td style="padding: 0;">
+                    <a href="{% url 'service_detail_url' category_slug=service.category.slug service_slug=service.slug %}">{{ service.title }}</a>
+                </td>
+                <td style="text-align: center; padding: 0;">
+                    <p>{{ service.price }}</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Детальная информация об услуге{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ service.title }}</h2>
+    <p>Цена: {{ service.price }}</p>
+    {% if service.description %}
+    <p>{{ service.description }}</p>
+    {% endif %}
+</div>
+{% endblock %}
