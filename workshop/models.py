@@ -12,7 +12,7 @@ class ServiceCategory(models.Model):
     slug = models.SlugField(max_length=255, unique=True, blank=True, default=datetime.time())
 
     def get_absolute_url(self):
-        return reverse("service_category_detail_url", kwargs={"slug": self.slug})
+        return reverse("workshop:service_category_detail_url", kwargs={"slug": self.slug})
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -41,7 +41,7 @@ class Service(models.Model):
     )
 
     def get_absolute_url(self):
-        return reverse("service", kwargs={"slug": self.slug})
+        return reverse("services:service_detail_url", kwargs={"slug": self.slug})
 
     def save(self, *args, **kwargs):
         if not self.slug:

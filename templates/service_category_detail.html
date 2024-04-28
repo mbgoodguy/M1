@@ -15,7 +15,7 @@
             {% for service in related_services %}
             <tr class="service">
                 <td style="padding: 0;">
-                    <a href="{% url 'service_detail_url' category_slug=service.category.slug service_slug=service.slug %}">{{ service.title }}</a>
+                    <a href="{% url 'services:service_detail_url' category_slug=service.category.slug service_slug=service.slug %}">{{ service.title }}</a>
                 </td>
                 <td style="text-align: center; padding: 0;">
                     <p>{{ service.price }}</p>
